@@ -44,9 +44,9 @@ progress.md              ← Project state log
 
 Install these once on your machine for better day-to-day workflow:
 
-- **RTK** (`rtk`): compresses noisy terminal output and reduces token overhead during agent sessions.
-- **Repomix** (`repomix`): packages a repository into AI-friendly output for full-context handoff/review.
-- **Claude-Mem** (`claude-mem`): persistent memory layer for Claude Code sessions.
+- **RTK** (`rtk`): compresses noisy terminal output and reduces token overhead during agent sessions. ([repo](https://github.com/rtk-ai/rtk))
+- **Repomix** (`repomix`): packages a repository into AI-friendly output for full-context handoff/review. ([repo](https://github.com/yamadashy/repomix))
+- **Claude-Mem** (`claude-mem`): persistent memory layer for Claude Code sessions. ([repo](https://github.com/thedotmack/claude-mem))
 
 Notes:
 
