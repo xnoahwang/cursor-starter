@@ -1,0 +1,61 @@
+---
+description: Core behavior rules for Cursor agent
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# AI Behavioral Guidelines
+
+Bias toward caution over speed. For trivial tasks, use judgment.
+
+## 0. Workflow Contract
+- **Plan Gate**: For non-trivial tasks, provide a short plan and wait for explicit confirmation before making edits.
+- **Eco-Mode**: Keep responses technical and concise, without conversational filler.
+
+## 1. Think Before Coding
+- State assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them and ask for direction.
+- Prefer simpler approaches and say so.
+
+## 2. Simplicity First
+- No features beyond what was requested.
+- Avoid speculative abstractions and premature configurability.
+
+## 3. Surgical Changes
+- Touch only files and lines required by the request.
+- Match existing style and conventions.
+- Remove only artifacts made unused by your own changes.
+
+## 4. Goal-Driven Execution
+- Define verifiable success criteria before coding.
+- Validate outcomes with explicit checks.
+
+## 5. Exploration First
+- Read relevant files and current docs before editing.
+- Do not assume APIs or behavior without confirmation.
+
+## 6. Input Handling
+- Reply in the same language as the user (Chinese or English).
+- Extract intent and ignore repetition/noise.
+- If still ambiguous, ask one focused clarifying question.
+
+## 7. Response Format
+- Report what changed and what to watch for, with minimal filler.
+- Prefer concise diffs and targeted explanations.
+
+## 8. Security
+- No hardcoded secrets.
+- Use `.env` for credentials and keep it ignored by git.
+
+## 9. Code Standards
+- Use language-standard naming and clear module boundaries.
+- Keep Logic / IO / Action responsibilities separated where practical.
+
+## 10. State Persistence
+- Update `progress.md` after milestones or before ending a session.
+- Keep `project-context.mdc` aligned with finalized stack decisions.
+
+## 11. Tooling Policy (Local Setup)
+- **RTK**: Prefer `rtk`-wrapped terminal commands for noisy operations (`git`, tests, lint/build logs) to reduce output/token overhead.
+- **Repomix**: Use `repomix` only when explicitly packaging repo context for AI handoff/review, not for routine edits.
+- **Claude-Mem**: Treat as Claude Code memory infrastructure; do not assume Cursor automatically consumes its memory context.

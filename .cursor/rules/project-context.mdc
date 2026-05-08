@@ -1,16 +1,18 @@
 ---
-inclusion: manual
+description: Project-specific context for Cursor agent
+globs: []
+alwaysApply: false
 ---
 
 # Project Context
 
-Reference in chat with `#project` when Kiro needs project-specific awareness.
-Fill in as the project evolves — start with Tech Stack and Commands.
+Reference this rule in chat when Cursor needs project-specific awareness.
+Fill in as the project evolves, starting with Tech Stack and Commands.
 
 ## Tech Stack
 - **Languages**: [TBD]
 - **Frameworks**: [TBD]
-- **Architecture**: Modular — Logic / IO / Action isolation.
+- **Architecture**: Modular - Logic / IO / Action isolation.
 
 ## Core Logic Locations
 - Entry point: [TBD]
