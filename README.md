@@ -40,6 +40,20 @@ progress.md              ← Project state log
 3. Keep `progress.md` updated after milestones.
 4. Open the project in Cursor and start working with the agent.
 
+## Recommended Global Tooling
+
+Install these once on your machine for better day-to-day workflow:
+
+- **RTK** (`rtk`): compresses noisy terminal output and reduces token overhead during agent sessions.
+- **Repomix** (`repomix`): packages a repository into AI-friendly output for full-context handoff/review.
+- **Claude-Mem** (`claude-mem`): persistent memory layer for Claude Code sessions.
+
+Notes:
+
+- In Cursor workflows, prioritize `rtk` for high-noise commands (`git`, tests, build/lint logs).
+- Use `repomix` when you need to send/inspect whole-repo context, not for routine edits.
+- `claude-mem` is not a direct Cursor memory replacement; it primarily powers Claude Code memory.
+
 ## Design Principles
 
 - **No redundancy** — one source of truth per rule.
